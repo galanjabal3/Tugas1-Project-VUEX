@@ -1,12 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="container">
+    <div class="row py-4">
+      <tempat-pemesanan />
+      <hasil-pemesanan/>
     </div>
-    <router-view />
   </div>
 </template>
+
+<script>
+  import TempatPemesanan from './components/TempatPemesanan.vue'
+  import HasilPemesanan from './components/HasilPemesanan.vue'
+
+export default {
+  name: 'app',
+  components: {
+    TempatPemesanan,
+    HasilPemesanan
+  }
+  
+}
+</script>
 
 <style>
 #app {
